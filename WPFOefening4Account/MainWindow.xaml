@@ -1,0 +1,60 @@
+﻿<Window x:Class="WPFOefening4Account.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:WPFOefening4Account"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Beige">
+        <Label Content="Persoonsgegevens" FontSize="30" HorizontalAlignment="Center"></Label>
+        <Border x:Name="bord" BorderBrush="Black" BorderThickness="2" Width="400" Height="310">
+        <StackPanel Width="400" Height="310" Background="Aqua">
+            <Label Content="Voornaam" HorizontalAlignment="Center"></Label>
+            <TextBox x:Name="txtVoornaam" Width="100"></TextBox>
+
+            <Label Content="Achternaam" HorizontalAlignment="Center"></Label>
+            <TextBox x:Name="txtAchternaam" Width="100"></TextBox>
+            <Label Content="Leeftijd" HorizontalAlignment="Center"></Label>
+            <TextBox x:Name="txtLeeftijd" Width="100"></TextBox>
+            
+            
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" >
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                          <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- First -->
+                    <Label Grid.Row="0" Grid.Column="1" Name="lblStraat"  HorizontalAlignment="Center" >Straat</Label>
+                    <TextBox Grid.Row="1" Grid.Column="1" Name="txtStraat" Width="120" />
+                   
+                    <!-- Last -->
+                    <Label Grid.Row="0" Grid.Column="2" Name="lblPlaats" HorizontalAlignment="Center"  >Plaats</Label>
+                    <TextBox Grid.Row="1" Grid.Column="2" Name="txtPlaats" Width="120" />
+                   
+                </Grid>
+                
+            </StackPanel>
+          
+            <StackPanel Margin="150,10" >
+                <Label FontWeight="Bold" VerticalAlignment="Center">Geslacht</Label>
+                <CheckBox x:Name="man">Man</CheckBox>
+                <CheckBox x:Name="vrouw" IsChecked="True">Vrouw</CheckBox>
+                <CheckBox x:Name="x">X</CheckBox>
+            </StackPanel>
+
+            <Button x:Name="Submit" Width="80" Height="30" Content="Submit" Click="Submit_Click"></Button>
+        
+        </StackPanel>
+        </Border>
+    </Grid>
+</Window>
